@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿QUÉ TITI SOY HOY?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #006847; /* Color verde del Club Atlético Banfield */
+            color: white; /* Texto blanco */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #FFFFFF; /* Blanco para el botón */
+            color: #006847; /* Verde del Club Atlético Banfield */
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #004F36; /* Verde oscuro para el hover */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿QUÉ TITI SOY HOY?</h1>
+    <button onclick="generateImage()">Generar</button>
+    <div id="imageContainer">
+        <!-- Random image will appear here -->
+    </div>
+
+    <script>
+        // Array of image URLs (replace with your own image paths or URLs)
+        const images = [
+            'TITI (1).jpeg', 'TITI (2).jpeg', 'TITI (3).jpeg', 'TITI (4).jpeg',
+            'TITI (5).jpeg', 'TITI (6).jpeg', 'TITI (7).jpeg', 'TITI (8).jpeg',
+            'TITI (9).jpeg', 'TITI (10).jpeg', 'TITI (11).jpeg', 'TITI (12).jpeg',
+            'TITI (13).jpeg', 'TITI (14).jpeg', 'TITI (15).jpeg', 'TITI (16).jpeg',
+            'TITI (17).jpeg', 'TITI (18).jpeg', 'TITI (19).jpeg', 'TITI (20).jpeg',
+            'TITI (21).jpeg', 'TITI (22).jpeg', 'TITI (23).jpeg', 'TITI (24).jpeg',
+            'TITI (25).jpeg', 'TITI (26).jpeg', 'TITI (27).jpeg', 'TITI (28).jpeg',
+            'TITI (29).jpeg', 'TITI (30).jpeg', 'TITI (31).jpeg', 'TITI (32).jpeg',
+            'TITI (33).jpeg', 'TITI (34).jpeg', 'TITI (35).jpeg', 'TITI (36).jpeg',
+            'TITI (37).jpeg', 'TITI (38).jpeg', 'TITI (39).jpeg', 'TITI (40).jpeg',
+            'TITI (41).jpeg', 'TITI (42).jpeg'
+        ];
+
+        function generateImage() {
+            // Get a random index from the images array
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomIndex];
+
+            // Display the selected image
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = `<img src="${randomImage}" alt="Random Image">`;
+        }
+    </script>
+</body>
+</html>
